@@ -1,0 +1,25 @@
+{
+  "name": "testcafe-browser-provider-webdriverio",
+  "version": "1.0.0",
+  "description": "Webdriverio browser plugin for TestCafe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnlctrl/testcafe-browser-provider-webdriverio.git"
+  },
+  "author": "fnlCtrl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fnlctrl/testcafe-browser-provider-webdriverio/issues"
+  },
+  "homepage": "https://github.com/fnlctrl/testcafe-browser-provider-webdriverio#readme",
+  "dependencies": {
+    "webdriverio": "^5.2.0"
+  }
+}
