@@ -5,7 +5,7 @@ This is the **webdriverio** browser provider plugin for [TestCafe](http://devexp
 ## Install
 
 ```
-npm install git@github.com:fnlctrl/testcafe-browser-provider-webdriverio.git
+npm install -D https://github.com/fnlctrl/testcafe-browser-provider-webdriverio.git
 ```
 
 ## Prerequisites
