@@ -49,7 +49,7 @@ module.exports = {
     let browser = await wdio.remote({
       capabilities,
       port: parseInt(REMOTE_PORT) || 4444,
-      hostname: REMOTE_HOST,
+      hostname: REMOTE_HOST.trim(),
       logLevel: CI ? 'silent' : 'error'
     });
     browser.navigateTo(pageUrl);
