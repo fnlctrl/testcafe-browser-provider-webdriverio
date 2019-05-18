@@ -34,14 +34,19 @@ module.exports = {
     let [browserString, platformName, deviceName] = target.split(':');
     let [browserName, browserVersion] = browserString.split('@');
     let enableVideo = ENABLE_VIDEO === 'true';
+    let enableVNC = ENABLE_VNC === 'true';
+
     let capabilities = {
       browserName,
       browserVersion,
       platformName,
-      deviceName,
-      enableVNC: ENABLE_VNC === 'true',
-      enableVideo
+      'appium:deviceName': deviceName,
+      'selenoid:options': {
+        enableVideo,
+        enableVNC
+      }
     };
+    
     // Set video name for CI
     if (CI && enableVideo) {
       capabilities.videoName = `test-${new Date().toISOString()}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHA.slice(0, 8)}.mp4`
@@ -57,7 +62,7 @@ module.exports = {
     this.heartbeats[id] = setInterval(() => {
       if (!this.heartbeats[id]) return;
       browser.getTitle().catch(() => {}); // suppress error
-    }, this.heartbeatInterval)
+    }, this.heartbeatInterval);
   },
 
   async closeBrowser(id) {
