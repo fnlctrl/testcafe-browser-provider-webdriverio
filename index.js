@@ -1,7 +1,7 @@
 const wdio = require('webdriverio');
 
 const { 
-  REMOTE_HOST, 
+  REMOTE_HOST = '127.0.0.1', 
   REMOTE_PORT, 
   ENABLE_VIDEO, 
   ENABLE_VNC,
