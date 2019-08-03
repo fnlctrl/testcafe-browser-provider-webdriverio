@@ -66,7 +66,7 @@ module.exports = {
   },
 
   async closeBrowser(id) {
-    this.browsers[id].deleteSession();
+    await this.browsers[id].deleteSession();
     delete this.browsers[id];
     clearInterval(this.heartbeats[id]);
     delete this.heartbeats[id];
